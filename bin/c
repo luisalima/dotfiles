@@ -1,0 +1,56 @@
+#!/bin/bash
+############################################################
+#
+#                     c - clean up the mess
+#          writen by Pedro Silva (psilva@dcc.online.pt)
+#                       July 28, 2002
+#
+# This program is under MOP License (My Own Public License)
+# you are not allowed to sel, copie, see, touch, or even 
+# use this program. In case of breaking this rules we're
+# obliged to imediatly turn off your computer.
+#
+############################################################
+
+########################################
+# Functions
+########################################
+#
+# Let's tell people how to work with this
+#
+usage() {
+    echo "Usage: c SOURCE"
+}
+
+#
+# Add here the regular expresions 
+# for the files you want to clean 
+#
+clean() {
+    rm -fv  *~
+    rm -fv .*~
+    rm -fv .#*
+    rm -fv \#*
+    rm -fv core
+    rm -fv core.[0-9]*
+    rm -fv .DOCP*
+
+    return 0
+}
+
+
+########################################
+# Main program
+########################################
+if [ $1 ]
+then
+    cd $1
+    echo "Cleaning $1"
+    clean
+    cd $OLDPWD
+    exit 0
+else
+    echo "Cleaning $PWD"
+    clean
+    exit 0
+fi
