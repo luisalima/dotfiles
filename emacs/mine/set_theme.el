@@ -2,7 +2,7 @@
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'zenburn t)
-(set-default-font "PragmataPro-16")
+(set-default-font "PragmataPro-13")
 
 ;; highlight current line
 (global-hl-line-mode 1)

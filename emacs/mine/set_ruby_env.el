@@ -1,28 +1,11 @@
-;; https://github.com/senny/rvm.el
-;; https://github.com/eschulte/rinari/issues/24
-(require 'rvm)
-(rvm-use-default) ;; use rvm's default ruby for the current Emacs
-;; session
-
-;; ;; rinari for RoR
-;; (require 'rinari)
-
 (add-to-list 'load-path "~/.emacs.d/vendor/haml-mode/")
 (require 'haml-mode)
-
 
 (add-to-list 'load-path "~/.emacs.d/vendor/emacs-pry")
 (require 'pry)
 ;; optional suggestions
 (global-set-key [S-f9] 'pry-intercept)
 (global-set-key [f9] 'pry-intercept-rerun)
-
-;; ;; make pry work with inf-ruby
-;; ;; stolen from https://gist.github.com/jsvnm/1390890
-;; (add-to-list 'inf-ruby-implementations '("pry" . "pry"))
-;; (setq inf-ruby-default-implementation "pry")
-;; (setq inf-ruby-first-prompt-pattern "^\\[[0-9]+\\] pry\\((.*)\\)> *")
-;; (setq inf-ruby-prompt-pattern "^\\[[0-9]+\\] pry\\((.*)\\)[>*\"'] *")
 
 ;; (require 'rspec-mode)
 ;; (defadvice rspec-compile (around rspec-compile-around)
