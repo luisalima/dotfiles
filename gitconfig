@@ -25,6 +25,13 @@
   user = luisalima
 [core]
   editor = emacs
-  excludesfile = $HOME/.gitignore_global
+  excludesfile = /opt/boxen/config/git/gitignore
 [merge]
-  ff = false
+  ff = true
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+[push]
+  default = simple
+[commit]
+  gpgsign = true
