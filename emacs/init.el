@@ -54,6 +54,7 @@
 ;;show-paren-mode allows one to see matching pairs of parentheses
 ;; and other characters
 (show-paren-mode 1)
+(menu-bar-mode -1) ;; remove useless menu bar
 
 ;; flyckeck
 
