@@ -5,16 +5,15 @@
 (require 'set_theme)
 (require 'set_shortcuts)
 (require 'set_hooks)
+(require 'set_linter_tools)
 (require 'set_dir_management)
 (require 'set_yaml_tools)
 (require 'set_password_management)
 (require 'set_my_customization)
 (require 'set_ruby_env)
 (require 'set_haskell_env)
-(require 'set_js_tools)
 (require 'set_scss_tools)
 (require 'set_misc)
-(require 'set_linter_tools)
 (require 'set_web_tools)
 
 ;; unorganized mess.............
@@ -30,8 +29,6 @@
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 ;;(load "/Users/lu/code/emacs-haskell-config/init.el")
 
-(setq js-indent-level 2)
-(setq javascript-indent-level 2)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 (setq indent-line-function 'insert-tab)
@@ -41,9 +38,13 @@
 (global-whitespace-mode t)
 
 (custom-set-faces
-  '(my-tab-face            ((((class color)) (:background "orange"))) t)
-  '(my-trailing-space-face ((((class color)) (:background "red"))) t)
-  '(my-long-line-face ((((class color)) (:background "red"))) t))
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(my-long-line-face ((((class color)) (:background "red"))) t)
+ '(my-tab-face ((((class color)) (:background "orange"))) t)
+ '(my-trailing-space-face ((((class color)) (:background "red"))) t))
 
 (global-git-gutter-mode +1)
 
@@ -59,3 +60,15 @@
 ;; flyckeck
 
 ;;; init.el ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("afbb40954f67924d3153f27b6d3399df221b2050f2a72eb2cfa8d29ca783c5a8" default)))
+ '(haskell-process-auto-import-loaded-modules t)
+ '(haskell-process-log t)
+ '(haskell-process-suggest-remove-import-lines t)
+ '(paradox-github-token t))
