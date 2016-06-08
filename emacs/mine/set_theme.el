@@ -1,13 +1,13 @@
 (global-linum-mode)
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+
 (load-theme 'zenburn t)
 (set-default-font "PragmataPro-13")
 
 ;; highlight current line
 (global-hl-line-mode 1)
-(set-face-foreground 'highlight nil)
-(set-face-underline-p 'highlight t)
+(set-face-background 'hl-line "gray19")
+(set-face-underline-p 'hl-line t)
 
 ;; display clock in status bar --------------
 (setq display-time-day-and-date t
@@ -20,6 +20,6 @@
   (lambda () (rainbow-mode 1)))
 (my-global-rainbow-mode 1)
 (require 'rainbow-delimiters)
-(global-rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 (provide 'set_theme)
