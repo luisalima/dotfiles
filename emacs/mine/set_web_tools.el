@@ -13,6 +13,13 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js$" . web-mode))
+
+;; http://cha1tanya.com/2015/06/20/configuring-web-mode-with-jsx.html
+(setq web-mode-content-types-alist
+      '(("jsx" . "\\.js[x]?\\'")))
+
+(add-hook 'js-mode-hook 'js2-minor-mode)
 
 ;; use eslint with web-mode for jsx files
 (flycheck-add-mode 'javascript-eslint 'web-mode)
