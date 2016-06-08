@@ -19,6 +19,7 @@
 (setq web-mode-content-types-alist
       '(("jsx" . "\\.js[x]?\\'")))
 
+;; https://yoo2080.wordpress.com/2012/03/15/js2-mode-setup-recommendation/
 (add-hook 'js-mode-hook 'js2-minor-mode)
 
 ;; use eslint with web-mode for jsx files
