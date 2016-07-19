@@ -1,6 +1,7 @@
 [user]
   name = Luisa Lima
-  email = luisamoyalima@gmail.com
+	email = luisalima@users.noreply.github.com
+	signingkey = 72A1E5017D08FC63
 [color]
   status = auto
   diff = auto
