@@ -80,3 +80,15 @@ alias ls='ls -a'
 
 if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 npm use global
+
+# added by travis gem
+[ -f /Users/lu/.travis/travis.sh ] && source /Users/lu/.travis/travis.sh
+
+cd() {
+  if [[ -e node_modules ]]
+  then
+      echo "node project detected, adding $(npm bin) to PATH"
+      export PATH=$(npm bin):$PATH
+  fi
+  builtin cd "$1"
+}
