@@ -85,6 +85,7 @@ append_to_shell_config_files 'source /usr/local/opt/zsh-history-substring-search
 append_to_shell_config_files '[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh'
 brew install findutils
 brew install the_silver_searcher
+brew install source-highlight 
 
 # ------------------------------------ #
 fancy_echo "installing editors..." 
