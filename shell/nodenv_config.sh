@@ -1,3 +1,9 @@
+# this approach breaks cd, I'm still trying to find a better
+# solution.
+
+# see https://gist.github.com/airtonix/9925531 for another approach.
+# http://stackoverflow.com/questions/9679932/how-to-use-package-installed-locally-in-node-modules
+
 # cd() {
 #   if [[ -e node_modules ]]
 #   then
