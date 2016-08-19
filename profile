@@ -6,12 +6,6 @@ export PATH=/usr/local/bin:$PATH
 # postgres app
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin/:$PATH
 
-# haskell platform
-export PATH="$HOME/Library/Haskell/bin:$PATH"
-export PATH="/Library/Haskell/bin:$PATH"
-export PATH="/Library/Frameworks/GHC.framework/Versions/Current/usr/bin:$PATH"
-export PATH="/usr/local/git/bin:$PATH"
-
 # nodenv
 export PATH="$HOME/.nodenv/shims:$PATH"
 
