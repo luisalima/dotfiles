@@ -91,12 +91,13 @@ brew install source-highlight
 fancy_echo "installing editors..." 
 brew install emacs
 brew cask install atom
-NUCLIDE_RECOMMENDED_PLUGINS=(nuclide tool-bar)
+NUCLIDE_RECOMMENDED_PLUGINS=(nuclide tool-bar haskell-grammar highlight-selected language-babel language-ini language-ocaml language-swift language-thrift merge-conflicts sort-lines)
 OTHER_ATOM_PLUGINS=()
 ALL_ATOM_PLUGINS=("${NUCLIDE_RECOMMENDED_PLUGINS[@]}" "${OTHER_ATOM_PLUGINS[@]}")
 for PLUGIN in $ALL_ATOM_PLUGINS
 do
     if [ ! -d $HOME/.atom/packages/$PLUGIN ]; then
+	echo "installing $PLUGIN for atom"
 	apm install $PLUGIN
     fi
 done
@@ -133,9 +134,10 @@ node_version="$(find_latest_node)"
 
 if ! nodenv versions | grep -Fq "$node_version"; then
   nodenv install $node_version
-  nodenv global $node_version
-  nodenv rehash
 fi
+
+nodenv global $node_version
+nodenv rehash
 
 # ------------------------------------ #
 fancy_echo "installing react native..."
@@ -143,28 +145,33 @@ brew install watchman
 npm install -g react-native-cli
 
 # ------------------------------------ #
+fancy_echo "installing postgres.app..."
+brew cask install postgres
+
+# ------------------------------------ #
 fancy_echo "installing heroku stuffs..."
 brew install "heroku-toolbelt"
 
 # ------------------------------------ #
+fancy_echo "erlang/elixir"
+brew install elixir
+mix local.hex
+mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
+
+# ------------------------------------ #
 fancy_echo "installing other binaries..."
 
-BINARIES=(google-chrome slack gpgtools sketch rescuetime macdown dropbox)
+BINARIES=(google-chrome slack gpgtools sketch rescuetime macdown dropbox whatsapp)
 for BINARY in $BINARIES
 do
+    echo "installing $BINARY"
     brew cask install $BINARY
 done
 
-
-# ----- TBD ----- #
 # ------------------------------------ #
-fancy_echo "erlang/elixir: TBD"
-
-# ------------------------------------ #
-fancy_echo "haskell & stack: TBD"
+fancy_echo "haskell (with stack)"
+brew install haskell-stack
 
 # ------------------------------------ #
-fancy_echo "postgres.app: TBD"
-
-# ------------------------------------ #
-fancy_echo "java: TBD"
+fancy_echo "java needs to be installed by hand... sorry! :P"
+java --version
