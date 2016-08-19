@@ -30,7 +30,7 @@ fi
 
 local node_env=''
 if which nodenv &> /dev/null; then
-  node_env=' node‹$( nodenv local)›%{$reset_color%}'
+  node_env=" node‹$( nodenv version | grep '\([0-9\.]*\)' -ohw )›%{$reset_color%}"
 fi
 
 local current_dir='${PWD/#$HOME/~}'
