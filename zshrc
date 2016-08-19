@@ -72,14 +72,12 @@ then
     #nvm install `nvm ls-remote | tail -n 1`
 fi
 
-man $(ls /usr/bin | gshuf -n 1) | cat
-
 export CLASSPATH=$CLASSPATH:$HOME/bin/postgresql-9.4.1208.jre6.jar
 
 alias ls='ls -a'
 
 if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
-npm use global
+# npm use global # this seems to be deprecated
 
 # added by travis gem
 [ -f /Users/lu/.travis/travis.sh ] && source /Users/lu/.travis/travis.sh
