@@ -66,8 +66,9 @@ if [ -z `which brew` ]; then
     append_to_shell_config_files 'export PATH="/usr/local/bin:$PATH"' 1
     export PATH="/usr/local/bin:$PATH"
 fi
-brew update
 
+brew update && brew upgrade
+ 
 # ------------------------------------ #
 fancy_echo "installing shell tools..."
 
@@ -161,7 +162,7 @@ mix archive.install https://github.com/phoenixframework/archives/raw/master/phoe
 # ------------------------------------ #
 fancy_echo "installing other binaries..."
 
-BINARIES=(google-chrome slack gpgtools sketch rescuetime macdown dropbox whatsapp)
+BINARIES=(google-chrome slack sourcetree gpgtools sketch rescuetime macdown dropbox whatsapp)
 for BINARY in $BINARIES
 do
     echo "installing $BINARY"

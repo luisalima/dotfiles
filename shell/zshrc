@@ -1,0 +1,31 @@
+export DOTFILES_DIR=$HOME/code/dotfiles
+source $DOTFILES_DIR/shell/common.sh
+
+# <oh-my-zsh configuration>
+ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="fino-luisa"
+TERM='xterm-256color'
+
+DISABLE_UPDATE_PROMPT='true' # http://stackoverflow.com/a/25876379
+
+# https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins
+plugins=(git mercurial rbenv brew bundler docker gem node npm ruby)
+
+unsetopt correct_all
+alias rspec='nocorrect rspec'
+
+source $ZSH/oh-my-zsh.sh
+# </end of oh-my-zsh configuration>
+
+source ~/.bin/tmuxinator.zsh
+
+# no idea why this is needed, but if it stays it will be 2.0 which leads to lots of mess
+unset RBENV_VERSION
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+
+
