@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # my laptop provisioning script
 # inspired by thoughtbot's https://github.com/thoughtbot/laptop
@@ -93,13 +93,16 @@ fancy_echo "installing editors..."
 brew install emacs
 brew cask install atom
 NUCLIDE_RECOMMENDED_PLUGINS=(nuclide tool-bar haskell-grammar highlight-selected language-babel language-ini language-ocaml language-swift language-thrift merge-conflicts sort-lines)
-OTHER_ATOM_PLUGINS=()
-ALL_ATOM_PLUGINS=("${NUCLIDE_RECOMMENDED_PLUGINS[@]}" "${OTHER_ATOM_PLUGINS[@]}")
-for PLUGIN in $ALL_ATOM_PLUGINS
+OTHER_ATOM_PLUGINS=(todo-show autoclose-html pigments auto-detect-indentation atom-beautify file-icons)
+ATOM_LINTERS=(linter)
+ALL_ATOM_PLUGINS=("${NUCLIDE_RECOMMENDED_PLUGINS[@]}" "${OTHER_ATOM_PLUGINS[@]}" "${ATOM_LINTERS[@]}")
+
+for PLUGIN in "${ALL_ATOM_PLUGINS[@]}"
 do
     if [ ! -d $HOME/.atom/packages/$PLUGIN ]; then
-	echo "installing $PLUGIN for atom"
 	apm install $PLUGIN
+    else
+	echo "$PLUGIN for atom is already installed"
     fi
 done
 
@@ -162,10 +165,9 @@ mix archive.install https://github.com/phoenixframework/archives/raw/master/phoe
 # ------------------------------------ #
 fancy_echo "installing other binaries..."
 
-BINARIES=(google-chrome slack sourcetree gpgtools sketch rescuetime macdown dropbox whatsapp)
-for BINARY in $BINARIES
+BINARIES=('google-chrome' slack sourcetree gpgtools sketch rescuetime macdown dropbox whatsapp postman)
+for BINARY in "${BINARIES[@]}"
 do
-    echo "installing $BINARY"
     brew cask install $BINARY
 done
 
@@ -175,4 +177,4 @@ brew install haskell-stack
 
 # ------------------------------------ #
 fancy_echo "java needs to be installed by hand... sorry! :P"
-java --version
+java -version
