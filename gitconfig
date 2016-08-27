@@ -15,8 +15,8 @@
   co = checkout
   cb = checkout -b
   a = add
-  l = log --graph --abbrev-commit --date=relative
-  la = log --graph --abbrev-commit --date=relative --all
+  log = ! git log --graph --abbrev-commit --date=relative --color | emojify | less -r
+  l = ! git log --graph --abbrev-commit --date=relative --color --all | emojify | less -r
   lp = log -p
   p = add -p
   c = commit
