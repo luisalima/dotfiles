@@ -17,7 +17,6 @@ export LS_COLORS
 # all other configs are organized before I go nuts :)
 source $DOTFILES_DIR/shell/encoding_config.sh
 source $DOTFILES_DIR/shell/path_config.sh
-source $DOTFILES_DIR/shell/updates_config.sh
 source $DOTFILES_DIR/shell/editor_config.sh
 source $DOTFILES_DIR/shell/rbenv_config.sh
 source $DOTFILES_DIR/shell/nodenv_config.sh

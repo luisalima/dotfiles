@@ -16,3 +16,6 @@ brew install findutils
 brew install the_silver_searcher
 brew install source-highlight 
 brew install diff-so-fancy
+
+brew install emojify
+

@@ -1,3 +1,13 @@
+;; Or if you installed Cask via Homebrew:
+;; http://cask.readthedocs.io/en/latest/guide/usage.html
+(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
+(cask-initialize)
+
+;; Keep ~Cask~ file in sync with the packages
+;; installed/uninstalled via ~M-x list-packages~
+;; https://github.com/rdallasgray/pallet
+(require 'pallet)
+
 (add-to-list 'load-path "~/.emacs.d/mine")
 
 (require 'set_emacs_server)

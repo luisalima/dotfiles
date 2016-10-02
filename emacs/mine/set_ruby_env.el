@@ -1,11 +1,10 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/haml-mode/")
 (require 'haml-mode)
 
-(add-to-list 'load-path "~/.emacs.d/vendor/emacs-pry")
-(require 'pry)
-;; optional suggestions
-(global-set-key [S-f9] 'pry-intercept)
-(global-set-key [f9] 'pry-intercept-rerun)
+;; (require 'pry)
+;; ;; optional suggestions
+;; (global-set-key [S-f9] 'pry-intercept)
+;; (global-set-key [f9] 'pry-intercept-rerun)
 
 ;; (require 'rspec-mode)
 ;; (defadvice rspec-compile (around rspec-compile-around)
@@ -19,9 +18,8 @@
 ;; (require 'feature-mode)
 ;; (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
-;; http://www.rubytapas.com/episodes/56-xmpfilter
-(add-to-list 'load-path "~/.emacs.d/vendor/rcodetools/")
-(require 'rcodetools)
-(define-key ruby-mode-map (kbd "C-c C-c") 'xmp)
+;; ;; http://www.rubytapas.com/episodes/56-xmpfilter
+;; (require 'rcodetools)
+;; (define-key ruby-mode-map (kbd "C-c C-c") 'xmp)
 
 (provide 'set_ruby_env)
