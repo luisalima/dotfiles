@@ -25,3 +25,5 @@ brew install source-highlight
 brew install diff-so-fancy
 
 brew install emojify
+
+brew install wget
