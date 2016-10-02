@@ -1,7 +1,20 @@
 ;; Or if you installed Cask via Homebrew:
 ;; http://cask.readthedocs.io/en/latest/guide/usage.html
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
+
+;; for some reason cask-initialize does not seem to work in some
+;; systems so I have to require it by hand
+(let ((default-directory  "~/.emacs.d/.cask/"))
+  (normal-top-level-add-subdirs-to-load-path))
+
 
 ;; Keep ~Cask~ file in sync with the packages
 ;; installed/uninstalled via ~M-x list-packages~
@@ -25,6 +38,7 @@
 (require 'set_scss_tools)
 (require 'set_misc)
 (require 'set_web_tools)
+(require 'set_git_tools)
 
 ;; unorganized mess.............
 
@@ -55,8 +69,6 @@
  '(my-long-line-face ((((class color)) (:background "red"))) t)
  '(my-tab-face ((((class color)) (:background "orange"))) t)
  '(my-trailing-space-face ((((class color)) (:background "red"))) t))
-
-(global-git-gutter-mode +1)
 
 (provide 'init)
 

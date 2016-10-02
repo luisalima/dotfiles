@@ -1,13 +1,4 @@
-;;; package --- Summary
-;;; Commentary:
-;;; This requires flycheck and sets global flycheck mode
-(require 'package)
-
-;;; Code:
-(package-initialize)
-
-(package-install 'flycheck)
-
+(require 'flycheck)
 (global-flycheck-mode)
 
 (provide 'set_linter_tools)

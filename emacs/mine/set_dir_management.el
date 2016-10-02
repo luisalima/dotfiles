@@ -1,4 +1,5 @@
 ;; https://github.com/bbatsov/projectile
+(require 'projectile)
 (projectile-global-mode)
 
 ;; don't know where this dir is...

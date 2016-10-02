@@ -1,6 +1,6 @@
 (global-linum-mode)
 
-
+(require 'zenburn-theme)
 (load-theme 'zenburn t)
 (set-default-font "PragmataPro-13")
 
