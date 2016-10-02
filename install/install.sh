@@ -53,6 +53,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 source $DIR/install_xcode.sh
 source $DIR/install_brew.sh
+source $DIR/install_python.sh
 source $DIR/install_shell_tools.sh
 source $DIR/install_editors.sh
 source $DIR/install_rubies.sh
