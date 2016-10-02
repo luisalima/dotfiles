@@ -40,3 +40,7 @@ flycheck_*.el
 
 emacs/ac-comphist.dat
 emacs/projectile-bookmarks.eld
+emacs/ido.last
+
+tmux-client-*.log
+tmux-server-*.log
