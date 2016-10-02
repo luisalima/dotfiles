@@ -4,7 +4,7 @@
 # inspired by thoughtbot's https://github.com/thoughtbot/laptop
 # warning, some parts are shamelessly stolen...
 
-set -e 
+set -e
 
 fancy_echo() {
   local fmt="$1"; shift
@@ -66,3 +66,4 @@ source $DIR/install_binaries.sh
 source $DIR/install_haskell.sh
 source $DIR/install_java.sh
 
+source $DIR/symlinks_setup.sh

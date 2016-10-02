@@ -1,11 +1,12 @@
 #!/bin/sh
 
 DOTFILES_DIR=$HOME/code/dotfiles
+THEME=fino-luisa.zsh-theme
 
-for FILE in zshrc bashrc
+for FILE in zshrc bashrc tmux.conf
 do
     mv $HOME/.$FILE $HOME/.$FILE.old 2>/dev/null
-    ln -s $DOTFILES_DIR/shell/$FILE $HOME/.$FILE 
+    ln -s $DOTFILES_DIR/shell/$FILE $HOME/.$FILE
 done
 
 
@@ -22,6 +23,5 @@ if [ ! -d $HOME/bin ]; then
     ln -s $DOTFILES_DIR/bin $HOME/bin
 fi
 
-rm -f $HOME/.oh-my-zsh/themes/fino-luisa.zsh-theme 2>/dev/null
-ln -s $DOTFILES_DIR/shell/fino-luisa.zsh-theme $HOME/.oh-my-zsh/themes/fino-luisa.zsh-theme
-
+rm -f $HOME/.oh-my-zsh/themes/$THEME 2>/dev/null
+ln -s $DOTFILES_DIR/shell/fino-luisa.zsh-theme $HOME/.oh-my-zsh/themes/$THEME
