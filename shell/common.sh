@@ -11,6 +11,9 @@ fi
 
 # some specific commands config.
 alias ls='ls -aG'
+alias st='stree'
+alias sourcetree='stree'
+
 LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
 export LS_COLORS
 
@@ -23,4 +26,3 @@ source $DOTFILES_DIR/shell/nodenv_config.sh
 
 # added by travis gem
 [ -f /Users/lu/.travis/travis.sh ] && source /Users/lu/.travis/travis.sh
-
