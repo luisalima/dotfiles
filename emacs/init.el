@@ -24,9 +24,9 @@
 (add-to-list 'load-path "~/.emacs.d/mine")
 
 (require 'set_emacs_server)
+(require 'set_bindings)
 (require 'set_package_manager)
 (require 'set_theme)
-(require 'set_shortcuts)
 (require 'set_hooks)
 (require 'set_linter_tools)
 (require 'set_dir_management)
