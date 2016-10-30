@@ -14,6 +14,10 @@
 ;; http://stackoverflow.com/questions/665600/how-can-i-get-emacs-to-revert-all-unchanged-buffers-when-switching-branches-in-g
 (global-auto-revert-mode)
 
+;; enable highlight for ag searches
+(require 'ag)
+(setq ag-highlight-search t)
+
 ;; source: http://steve.yegge.googlepages.com/my-dot-emacs-file
 (defun rename-file-and-buffer (new-name)
   "Renames both current buffer and file it's visiting to NEW-NAME."
