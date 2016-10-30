@@ -44,3 +44,6 @@ emacs/ido.last
 
 tmux-client-*.log
 tmux-server-*.log
+
+# "my secret" customization
+customization.sh
