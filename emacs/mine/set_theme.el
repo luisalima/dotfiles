@@ -22,4 +22,7 @@
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
+(require 'focus)
+(add-hook 'prog-mode-hook 'focus-mode)
+
 (provide 'set_theme)
