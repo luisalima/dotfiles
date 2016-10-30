@@ -15,6 +15,7 @@
 (depends-on "ack-and-a-half")
 (depends-on "ag")
 (depends-on "projectile")
+(depends-on "exec-path-from-shell")
 
 (depends-on "magit")
 (depends-on "git-gutter")
@@ -28,5 +29,8 @@
 (depends-on "yaml-mode")
 (depends-on "haml-mode")
 (depends-on "python-mode")
+(depends-on "json-mode")
+(depends-on "web-mode")
+(depends-on "js2-mode")
 
 (depends-on "id-manager")
