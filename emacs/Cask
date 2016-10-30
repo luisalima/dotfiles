@@ -3,21 +3,28 @@
 (source "marmalade" "http://marmalade-repo.org/packages/")
 (source "org" "http://orgmode.org/elpa/")
 
-(depends-on "ack-and-a-half")
+
 (depends-on "cask")
-(depends-on "magit")
 (depends-on "pallet")
-(depends-on "projectile")
+
 (depends-on "zenburn-theme")
 (depends-on "rainbow-mode")
 (depends-on "rainbow-delimiters")
-(depends-on "auto-complete")
+
+(depends-on "ack-and-a-half")
+(depends-on "projectile")
+
+(depends-on "magit")
 (depends-on "git-gutter")
+
+(depends-on "auto-complete")
+
 (depends-on "flycheck")
+
 (depends-on "markdown-mode")
 (depends-on "wc-mode")
-
 (depends-on "yaml-mode")
-(depends-on "id-manager")
 (depends-on "haml-mode")
 (depends-on "python-mode")
+
+(depends-on "id-manager")
