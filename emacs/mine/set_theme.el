@@ -24,5 +24,6 @@
 
 (require 'focus)
 (add-hook 'prog-mode-hook 'focus-mode)
+(setq focus-dimness -1)
 
 (provide 'set_theme)
