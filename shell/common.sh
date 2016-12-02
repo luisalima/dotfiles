@@ -26,3 +26,7 @@ source $DOTFILES_DIR/shell/nodenv_config.sh
 
 # added by travis gem
 [ -f /Users/lu/.travis/travis.sh ] && source /Users/lu/.travis/travis.sh
+
+export ALTERNATE_EDITOR=""
+alias emacs='emacsclient -t'
+alias e='emacs'
