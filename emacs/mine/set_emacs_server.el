@@ -1,3 +1,4 @@
-(setq server-socket-dir (format "/tmp/emacs%d" (user-uid)))
+(server-start)
+(setq server-socket-dir "~/.emacs.d/server")
 
 (provide 'set_emacs_server)

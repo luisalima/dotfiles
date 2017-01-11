@@ -15,7 +15,6 @@
 (let ((default-directory  "~/.emacs.d/.cask/"))
   (normal-top-level-add-subdirs-to-load-path))
 
-
 ;; Keep ~Cask~ file in sync with the packages
 ;; installed/uninstalled via ~M-x list-packages~
 ;; https://github.com/rdallasgray/pallet
@@ -82,21 +81,3 @@
 ;; flyckeck
 
 ;;; init.el ends here
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("afbb40954f67924d3153f27b6d3399df221b2050f2a72eb2cfa8d29ca783c5a8" default)))
- '(haskell-process-auto-import-loaded-modules t)
- '(haskell-process-log t)
- '(haskell-process-suggest-remove-import-lines t)
- '(paradox-github-token t))
-
-;; store all backup and autosave files in the tmp dir
-(setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
-(setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
