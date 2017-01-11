@@ -73,5 +73,8 @@
         ad-do-it)
     ad-do-it))
 
+;; force fixed indentation for tag attributes
+(setq web-mode-attr-indent-offset 2)
+
 (provide 'set_web_tools)
 ;;; set_web_tools.el ends here
