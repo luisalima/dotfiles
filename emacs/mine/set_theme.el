@@ -1,4 +1,5 @@
 (global-linum-mode)
+(setq linum-format "%4d ")
 
 (require 'zenburn-theme)
 (load-theme 'zenburn t)
@@ -28,10 +29,34 @@
 
 
 (require 'highlight-indent-guides)
-(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-(setq highlight-indent-guides-method 'character)
-(set-face-background 'highlight-indent-guides-odd-face "darkgray")
-(set-face-background 'highlight-indent-guides-even-face "darkgray")
+;; (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+;; (setq highlight-indent-guides-method 'character)
+;; (set-face-background 'highlight-indent-guides-odd-face "darkgray")
+;; (set-face-background 'highlight-indent-guides-even-face "darkgray")
 
+;; (global-aggressive-indent-mode 1)
+;; (add-to-list
+;;  'aggressive-indent-dont-indent-if
+;;  '(and (derived-mode-p 'c++-mode)
+;;        (null (string-match "\\([;{}]\\|\\b\\(if\\|for\\|while\\)\\b\\)"
+;;                            (thing-at-point 'line)))))
+
+(smart-mode-line-enable 1)
+(setq sml/theme 'dark)
+
+;; ;; Customizing colors used in diff mode
+;; (defun custom-diff-colors ()
+;;   "update the colors for diff faces"
+;;   (set-face-attribute
+;;    'diff-added nil :foreground "green")
+;;   (set-face-attribute
+;;    'diff-removed nil :foreground "red")
+;;   (set-face-attribute
+;;    'diff-changed nil :foreground "purple"))
+;; (eval-after-load "diff-mode" '(custom-diff-colors))
+
+;; (custom-set-faces
+;;  '(magit-diff-added ((t (:background "black" :foreground "green3"))))
+;;  '(magit-diff-removed ((t (:background "black" :foreground "red3")))))
 
 (provide 'set_theme)
