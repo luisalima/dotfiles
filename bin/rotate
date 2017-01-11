@@ -1,0 +1,15 @@
+#!/bin/sh
+
+rotate() {
+    if [ `git config user.email` = "luisalima@users.noreply.github.com" ]; then
+        echo "Rui's turn"
+        git config --local user.name "Rui Afonso Pereira"
+        git config --local user.email "rui@kidzen.us"
+    else
+        echo "Luisa's turn"
+        git config --local user.name "Luisa Lima"
+        git config --local user.email "luisalima@users.noreply.github.com"
+    fi
+}
+
+rotate
