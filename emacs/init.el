@@ -22,7 +22,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/mine")
 
-(require 'set_emacs_server)
+;;(require 'set_emacs_server)
 (require 'set_bindings)
 (require 'set_package_manager)
 (require 'set_theme)
