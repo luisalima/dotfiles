@@ -37,3 +37,5 @@
 (depends-on "smart-mode-line")
 
 (depends-on "id-manager")
+
+(depends-on "alchemist")
