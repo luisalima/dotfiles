@@ -1,7 +1,8 @@
 [user]
-  name = Luisa Lima
-	email = luisalima@users.noreply.github.com
+	name = Luisa Lima
 	signingkey = 72A1E5017D08FC63
+	useConfigOnly = true
+	email = luisalima@users.noreply.github.com
 [color]
   status = auto
   diff = auto
@@ -25,8 +26,9 @@
 [github]
   user = luisalima
 [core]
-  editor = emacs
-  excludesfile = /opt/boxen/config/git/gitignore
+  editor = /usr/bin/emacs
+	excludesfile = /Users/lu/.gitignore_global
+	ignorecase = false
 [merge]
   ff = true
 [filter "media"]
@@ -41,7 +43,7 @@
   show = diff-so-fancy | less --tabs=4 -RFX
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
