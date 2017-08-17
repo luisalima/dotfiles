@@ -11,9 +11,10 @@
 (set-face-underline-p 'hl-line t)
 
 ;; display clock in status bar --------------
-(setq display-time-day-and-date t
-      display-time-24hr-format t)
-(display-time)
+;;(setq display-time-day-and-date t
+;;      display-time-24hr-format t)
+;;(display-time)
+(size-indication-mode)
 
 (require 'rainbow-mode)
 ;; http://stackoverflow.com/questions/16048231/how-to-enable-a-package-mode-on-emacs-startup
@@ -23,9 +24,9 @@
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
-(require 'focus)
-(add-hook 'prog-mode-hook 'focus-mode)
-(setq focus-dimness -1)
+;; (require 'focus)
+;; (add-hook 'prog-mode-hook 'focus-mode)
+;; (setq focus-dimness -1)
 
 
 (require 'highlight-indent-guides)
@@ -41,8 +42,13 @@
 ;;        (null (string-match "\\([;{}]\\|\\b\\(if\\|for\\|while\\)\\b\\)"
 ;;                            (thing-at-point 'line)))))
 
+(setq sml/no-confirm-load-theme t)
+(sml/setup)
 (smart-mode-line-enable 1)
-(setq sml/theme 'dark)
+(setq sml/theme 'respectful)
+(setq sml/shorten-directory t)
+(setq sml/shorten-modes t)
+
 
 ;; ;; Customizing colors used in diff mode
 ;; (defun custom-diff-colors ()
@@ -58,5 +64,6 @@
 ;; (custom-set-faces
 ;;  '(magit-diff-added ((t (:background "black" :foreground "green3"))))
 ;;  '(magit-diff-removed ((t (:background "black" :foreground "red3")))))
+
 
 (provide 'set_theme)

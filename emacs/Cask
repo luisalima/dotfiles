@@ -21,7 +21,9 @@
 (depends-on "magit")
 (depends-on "git-gutter")
 
-(depends-on "auto-complete")
+(depends-on "company")
+(depends-on "helm")
+(depends-on "helm-projectile")
 
 (depends-on "flycheck")
 
@@ -39,3 +41,5 @@
 (depends-on "id-manager")
 
 (depends-on "alchemist")
+
+(depends-on "evil")
