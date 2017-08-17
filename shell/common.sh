@@ -30,3 +30,4 @@ source $DOTFILES_DIR/shell/nodenv_config.sh
 export ALTERNATE_EDITOR=""
 alias emacs='emacsclient -t'
 alias e='emacs'
+alias eb='/Users/lu/Library/Python/2.7/bin/eb'
