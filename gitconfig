@@ -26,7 +26,7 @@
 [github]
   user = luisalima
 [core]
-  editor = /usr/bin/emacs
+  editor = emacs
 	excludesfile = /Users/lu/.gitignore_global
 	ignorecase = false
 [merge]
@@ -43,7 +43,7 @@
   show = diff-so-fancy | less --tabs=4 -RFX
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
