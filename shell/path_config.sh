@@ -19,3 +19,5 @@ export JAVA_HOME="$(/usr/libexec/java_home)"
 export CLASSPATH=$CLASSPATH:$HOME/bin/postgresql-9.4.1208.jre6.jar
 
 export PATH=$PATH:/Library/TeX/texbin/
+
+export PATH=$PATH:$HOME/anaconda/bin
