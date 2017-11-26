@@ -22,11 +22,11 @@ append_to_shell_config_files() {
   for FILE in $zshrc $bash_profile
   do
       if ! grep -Fqs "$text" "$FILE"; then
-	  if [ "$skip_new_line" -eq 1 ]; then
-	      printf "%s\n" "$text" >> "$FILE"
-	  else
-	      printf "\n%s\n" "$text" >> "$FILE"
-	  fi
+          if [ "$skip_new_line" -eq 1 ]; then
+              printf "%s\n" "$text" >> "$FILE"
+          else
+              printf "\n%s\n" "$text" >> "$FILE"
+          fi
       fi
   done
 }
@@ -57,14 +57,13 @@ source $DIR/install_python.sh
 source $DIR/install_shell_tools.sh
 source $DIR/install_editors.sh
 source $DIR/install_rubies.sh
-source $DIR/install_gems.sh
 source $DIR/install_node.sh
-source $DIR/install_react_native.sh
-source $DIR/install_postgres.sh
-source $DIR/install_heroku.sh
-source $DIR/install_elixir.sh
-source $DIR/install_binaries.sh
-source $DIR/install_haskell.sh
-source $DIR/install_java.sh
-
 source $DIR/symlinks_setup.sh
+source $DIR/install_zsh.sh
+source $DIR/install_java.sh
+source $DIR/install_ml_tools.sh
+source $DIR/install_elixir.sh
+source $DIR/install_haskell.sh
+# source $DIR/install_postgres.sh
+source $DIR/install_heroku.sh
+# source $DIR/install_binaries.sh

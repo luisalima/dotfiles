@@ -1,3 +1,5 @@
+#!/bin/bash
+
 fancy_echo "checking for brew and cask..."
 
 if [ -z `which brew` ]; then

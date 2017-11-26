@@ -1,3 +1,5 @@
+#!/bin/bash
+
 fancy_echo "installing rubies..." 
 brew install rbenv
 

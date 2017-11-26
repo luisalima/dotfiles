@@ -1,7 +1,11 @@
 #!/bin/sh
 
-DOTFILES_DIR=$HOME/code/dotfiles
-THEME=fino-luisa.zsh-theme
+fancy_echo "setting up symlinks..."
+
+set +e
+
+DOTFILES_DIR=$HOME/config/dotfiles
+
 
 for FILE in zshrc bashrc tmux.conf
 do
@@ -23,5 +27,3 @@ if [ ! -d $HOME/bin ]; then
     ln -s $DOTFILES_DIR/bin $HOME/bin
 fi
 
-rm -f $HOME/.oh-my-zsh/themes/$THEME 2>/dev/null
-ln -s $DOTFILES_DIR/shell/fino-luisa.zsh-theme $HOME/.oh-my-zsh/themes/$THEME

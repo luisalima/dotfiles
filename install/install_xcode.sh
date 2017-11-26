@@ -1,3 +1,5 @@
+#!/bin/bash
+
 fancy_echo "checking for xcode..."
 
 if [ -z `xcode-select -p` ]; then
