@@ -1,7 +1,7 @@
 #!/bin/bash
 
 fancy_echo "installing node..."
-brew install nodenv
+brew_install nodenv
 append_to_shell_config_files 'export PATH="$HOME/.nodenv/bin:$PATH"'
 append_to_shell_config_files 'eval "$(nodenv init -)"'
 node_version="$(find_latest_node)"

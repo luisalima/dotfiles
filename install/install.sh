@@ -48,6 +48,11 @@ find_latest_node() {
   nodenv install -l | gxargs -n 1 | grep '^[0-9]\+.[0-9]\+.[0-9]\+' | tail -n 1
 }
 
+brew_install() {
+    if [ -z "$(which "$1")" ]; then
+        brew install "$1"
+    fi
+}
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 

@@ -2,8 +2,8 @@
 
 fancy_echo "installing ml tools..."
 
-brew install scala
+brew_install scala
 export PATH=/usr/local/scala/bin:$PATH
 pip install cql
 pip install jupyter
-brew install cassandra
+brew_install cassandra
