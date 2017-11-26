@@ -22,6 +22,7 @@
   p = add -p
   c = commit
   bb = log -p -M --follow --stat
+  rmmerged = ! git branch --merged develop | grep -v develop | xargs -n 1 git branch -d && git branch --merged master | grep -v master | xargs -n 1 git branch -d
 [format]
   pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an %ae>%Creset
 [github]
