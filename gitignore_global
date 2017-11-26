@@ -1,0 +1,50 @@
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Org-mode
+.org-id-locations
+*_archive
+
+# flymake-mode
+*_flymake.*
+
+# eshell files
+/eshell/history
+/eshell/lastdir
+
+# elpa packages
+emacs/elpa/
+
+# reftex files
+*.rel
+
+# AUCTeX auto folder
+/auto/
+
+# cask packages
+.cask/
+dist/
+
+# Flycheck
+flycheck_*.el
+
+# projectile files
+.projectile
+
+emacs/ac-comphist.dat
+emacs/projectile-bookmarks.eld
+emacs/projectile.cache
+emacs/ido.last
+
+tmux-client-*.log
+tmux-server-*.log
+
+# "my secret" customization
+customization.sh

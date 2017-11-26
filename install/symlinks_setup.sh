@@ -17,6 +17,9 @@ done
 mv $HOME/.gitconfig $HOME/.gitconfig.old 2>/dev/null
 ln -s $DOTFILES_DIR/gitconfig $HOME/.gitconfig
 
+mv "$HOME/.gitignore_global" "$HOME/.gitignore_global" 2>/dev/null
+ln -s "$DOTFILES_DIR/gitignore_global" "$HOME/.gitignore_global"
+git config --global core.excludesfile ~/.gitignore_global
 
 mv -f $HOME/.emacs.d $HOME/.emacs.d.old 2>/dev/null
 ln -s $DOTFILES_DIR/emacs $HOME/.emacs.d
@@ -26,4 +29,3 @@ if [ ! -d $HOME/bin ]; then
     mkdir bin
     ln -s $DOTFILES_DIR/bin $HOME/bin
 fi
-
