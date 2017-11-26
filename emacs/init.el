@@ -37,9 +37,8 @@
 (require 'set_web_tools)
 (require 'set_misc)
 
-
-;; (require 'set_password_management) ;; using Keepass now
-;; (require 'set_scss_tools) ;; no longer need scss :)
+(require 'ensime)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
 ;; unorganized mess.............
 
@@ -51,7 +50,7 @@
 (add-to-list 'load-path py-install-directory)
 (require 'python-mode)
 
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+;; (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 ;;(load "/Users/lu/code/emacs-haskell-config/init.el")
 
 (setq-default indent-tabs-mode nil)
@@ -121,6 +120,12 @@
  '(haskell-process-suggest-remove-import-lines t)
  '(package-selected-packages
    (quote
-    (feature-mode apib-mode colemak-evil evil-visual-mark-mode zenburn-theme yaml-mode web-mode wc-mode smart-mode-line-powerline-theme rainbow-mode rainbow-delimiters python-mode projectile pallet markdown-mode magit json-mode js2-mode id-manager highlight-indent-guides haml-mode git-gutter focus flycheck exec-path-from-shell evil column-marker auto-complete alchemist aggressive-indent ag ack-and-a-half))))
+    (cql-mode use-package ensime feature-mode apib-mode colemak-evil evil-visual-mark-mode zenburn-theme yaml-mode web-mode wc-mode smart-mode-line-powerline-theme rainbow-mode rainbow-delimiters python-mode projectile pallet markdown-mode magit json-mode js2-mode id-manager highlight-indent-guides haml-mode git-gutter focus flycheck exec-path-from-shell evil column-marker auto-complete alchemist aggressive-indent ag ack-and-a-half))))
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+
+
+;;Replace all freakin' ^M chars in the current buffer
+(fset 'replace-ctrlms
+   [escape ?< escape ?% ?\C-q ?\C-m return ?\C-q ?\C-j return ?!])
+(global-set-key "\C-cm" 'replace-ctrlms)

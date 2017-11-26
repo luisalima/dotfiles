@@ -42,12 +42,12 @@
 ;;        (null (string-match "\\([;{}]\\|\\b\\(if\\|for\\|while\\)\\b\\)"
 ;;                            (thing-at-point 'line)))))
 
-(setq sml/no-confirm-load-theme t)
-(sml/setup)
-(smart-mode-line-enable 1)
-(setq sml/theme 'respectful)
-(setq sml/shorten-directory t)
-(setq sml/shorten-modes t)
+;; (setq sml/no-confirm-load-theme t)
+;; (sml/setup)
+;; (smart-mode-line-enable 1)
+;; (setq sml/theme 'respectful)
+;; (setq sml/shorten-directory t)
+;; (setq sml/shorten-modes t)
 
 
 ;; ;; Customizing colors used in diff mode
