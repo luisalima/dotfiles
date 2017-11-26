@@ -11,13 +11,6 @@ export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin/:$PATH
 # nodenv
 export PATH="$HOME/.nodenv/shims:$PATH"
 
-# android home
-export ANDROID_HOME=/usr/local/opt/android-sdk
-
 export JAVA_HOME="$(/usr/libexec/java_home)"
 
-export CLASSPATH=$CLASSPATH:$HOME/bin/postgresql-9.4.1208.jre6.jar
-
-export PATH=$PATH:/Library/TeX/texbin/
-
-export PATH=$PATH:$HOME/anaconda/bin
+export PATH=$PATH:$HOME/miniconda/bin
