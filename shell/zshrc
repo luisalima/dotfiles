@@ -18,5 +18,6 @@ prompt pure
 eval "$(rbenv init - --no-rehash)"
 
 export PATH="$HOME/.nodenv/bin:$PATH"
+export FPATH="/usr/local/share/zsh-completions:$FPATH"
 
 eval "$(nodenv init -)"
