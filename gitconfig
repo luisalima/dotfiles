@@ -29,7 +29,7 @@
   user = luisalima
 [core]
   editor = emacs
-	excludesfile = /Users/lu/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	ignorecase = false
 [merge]
   ff = true
@@ -40,6 +40,7 @@
   default = simple
 [commit]
   gpgsign = true
+  template = ~/.git_template
 [pager]
   diff = diff-so-fancy | less --tabs=4 -RFX
   show = diff-so-fancy | less --tabs=4 -RFX
