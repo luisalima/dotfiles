@@ -7,5 +7,5 @@ I use Mac OS X and:
 
 * emacs
 * tmux (with iterm2)
-* zsh (with oh-my-zsh)
+* zsh
 * git
