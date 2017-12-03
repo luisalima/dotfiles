@@ -6,3 +6,4 @@ brew_install scala
 pip install cql
 pip install jupyter
 brew_install cassandra
+brew_install sbt
