@@ -21,3 +21,10 @@ export PATH="$HOME/.nodenv/bin:$PATH"
 export FPATH="/usr/local/share/zsh-completions:$FPATH"
 
 eval "$(nodenv init -)"
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source /usr/local/opt/zsh-history-substring-search/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+export SPARK_HOME=/usr/local/spark
+
+export PATH=/usr/local/spark/bin:$PATH
