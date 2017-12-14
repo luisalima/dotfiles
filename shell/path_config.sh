@@ -11,6 +11,6 @@ export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin/:$PATH
 # nodenv
 export PATH="$HOME/.nodenv/shims:$PATH"
 
-export JAVA_HOME="$(/usr/libexec/java_home)"
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 
 export PATH=$PATH:$HOME/miniconda/bin
