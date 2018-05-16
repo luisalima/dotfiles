@@ -29,6 +29,8 @@ export ALTERNATE_EDITOR=""
 alias emacs='emacsclient -t'
 alias e='emacs'
 
+alias gwip='git add -A; git commit -n -m "--wip-- [skip ci]"'
+
 eval "$(rbenv init - --no-rehash)"
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
