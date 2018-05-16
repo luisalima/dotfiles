@@ -2,7 +2,7 @@
 	name = Luisa Lima
 	signingkey = 72A1E5017D08FC63
 	useConfigOnly = true
-	email = luisalima@users.noreply.github.com
+  email = luisalima@users.noreply.github.com
 [color]
   status = auto
   diff = auto
