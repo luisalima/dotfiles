@@ -2,7 +2,7 @@
 	name = Luisa Lima
 	signingkey = 72A1E5017D08FC63
 	useConfigOnly = true
-  email = luisalima@users.noreply.github.com
+	email = luisalima@users.noreply.github.com
 [color]
   status = auto
   diff = auto
@@ -29,7 +29,7 @@
   user = luisalima
 [core]
   editor = emacs
-	excludesfile = ~/.gitignore_global
+	excludesfile = $HOME/.gitignore_global
 	ignorecase = false
 [merge]
   ff = true
@@ -50,7 +50,7 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [filter "lfs"]
 	process = git-lfs filter-process
