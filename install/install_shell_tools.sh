@@ -31,3 +31,5 @@ brew_install source-highlight
 brew_install diff-so-fancy
 brew_install emojify
 brew_install wget
+
+brew_install autojump

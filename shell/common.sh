@@ -34,3 +34,5 @@ alias gwip='git add -A; git commit -n -m "--wip-- [skip ci]"'
 eval "$(rbenv init - --no-rehash)"
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
+
+ [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
