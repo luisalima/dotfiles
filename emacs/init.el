@@ -120,7 +120,7 @@
  '(haskell-process-suggest-remove-import-lines t)
  '(package-selected-packages
    (quote
-    (cql-mode use-package ensime feature-mode apib-mode colemak-evil evil-visual-mark-mode zenburn-theme yaml-mode web-mode wc-mode smart-mode-line-powerline-theme rainbow-mode rainbow-delimiters python-mode projectile pallet markdown-mode magit json-mode js2-mode id-manager highlight-indent-guides haml-mode git-gutter focus flycheck exec-path-from-shell evil column-marker auto-complete alchemist aggressive-indent ag ack-and-a-half))))
+    (php-mode dockerfile-mode docker cql-mode use-package ensime feature-mode apib-mode colemak-evil evil-visual-mark-mode zenburn-theme yaml-mode web-mode wc-mode smart-mode-line-powerline-theme rainbow-mode rainbow-delimiters python-mode projectile pallet markdown-mode magit json-mode js2-mode id-manager highlight-indent-guides haml-mode git-gutter focus flycheck exec-path-from-shell evil column-marker auto-complete alchemist aggressive-indent ag ack-and-a-half))))
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 

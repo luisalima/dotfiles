@@ -1,5 +1,5 @@
-(global-linum-mode)
-(setq linum-format "%4d ")
+;; (global-linum-mode)
+;; (setq linum-format "%4d ")
 
 (require 'zenburn-theme)
 (load-theme 'zenburn t)
