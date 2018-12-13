@@ -20,7 +20,12 @@ prompt pure
 eval "$(rbenv init - --no-rehash)"
 
 export PATH="$HOME/.nodenv/bin:$PATH"
-export FPATH="/usr/local/share/zsh-completions:$FPATH"
+
+# setup zsh completion system
+# https://stackoverflow.com/questions/26462667/git-completion-not-working-in-zsh-on-os-x-yosemite-with-homebrew
+export FPATH="/usr/local/share/zsh-completions:/usr/local/share/zsh/site-functions:$FPATH"
+autoload -U compinit && compinit
+zmodload -i zsh/complist
 
 eval "$(nodenv init -)"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -43,3 +48,6 @@ setopt    sharehistory      # Share history across terminals
 setopt incappendhistory     # Immediately append to the history file, not just when a term is killed
 
 source "$DOTFILES_DIR/shell/last-working-dir.plugin.zsh"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /Users/lu/bin/vault vault

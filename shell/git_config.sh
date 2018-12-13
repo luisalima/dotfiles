@@ -234,3 +234,7 @@ alias glum='git pull upstream master'
 
 alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify -m "--wip-- [skip ci]"'
+
+alias gcom='git checkout master'
+alias glrbm='git checkout master && git pull && git checkout - && git rebase master'
+alias glrbim='git checkout master && git pull && git checkout - && git rebase master && git rebase -i master'

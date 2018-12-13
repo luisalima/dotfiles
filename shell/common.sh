@@ -23,7 +23,6 @@ source "$DOTFILES_DIR/shell/path_config.sh"
 source "$DOTFILES_DIR/shell/editor_config.sh"
 source "$DOTFILES_DIR/shell/rbenv_config.sh"
 source "$DOTFILES_DIR/shell/nodenv_config.sh"
-source "$DOTFILES_DIR/shell/git_config.sh"
 
 export ALTERNATE_EDITOR=""
 alias emacs='emacsclient -t'
@@ -35,4 +34,6 @@ eval "$(rbenv init - --no-rehash)"
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
- [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+source "$DOTFILES_DIR/shell/git_config.sh"
+alias be='bundle exec'
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
