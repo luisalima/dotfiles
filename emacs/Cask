@@ -22,5 +22,6 @@
 (depends-on "json-mode")
 (depends-on "web-mode")
 (depends-on "js2-mode")
-(depends-on "alchemist")
-(depends-on "ensime")
+(depends-on "highlight-indent-guides")
+(depends-on "helm")
+(depends-on "helm-projectile")
