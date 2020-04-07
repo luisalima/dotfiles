@@ -22,6 +22,18 @@
 
 (add-to-list 'load-path "~/.emacs.d/mine")
 
+(depends-on "rainbow-delimiters")
+
+;; go stuffs
+(require 'go-mode)
+(add-hook 'before-save-hook 'gofmt-before-save)
+(add-hook 'go-mode-hook (lambda ()
+                          (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)))
+
+(add-to-list 'exec-path (concat (getenv "HOME") "/go/bin"))
+(add-to-list 'exec-path "/usr/local/go/bin")
+
+;;(require 'set_emacs_server)
 (require 'set_bindings)
 (require 'set_package_manager)
 (require 'set_my_customization)

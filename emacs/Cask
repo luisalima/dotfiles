@@ -23,5 +23,4 @@
 (depends-on "web-mode")
 (depends-on "js2-mode")
 (depends-on "highlight-indent-guides")
-(depends-on "helm")
-(depends-on "helm-projectile")
+(depends-on "go-mode")
