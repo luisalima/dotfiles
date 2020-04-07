@@ -36,6 +36,8 @@ export SPARK_HOME=/usr/local/spark
 
 export PATH=/usr/local/spark/bin:$PATH
 
+export PATH=$PATH:$HOME/go/bin
+
 ##############################################################################
 # History Configuration
 ##############################################################################

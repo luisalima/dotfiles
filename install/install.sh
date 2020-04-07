@@ -65,10 +65,10 @@ source $DIR/install_rubies.sh
 source $DIR/install_node.sh
 source $DIR/symlinks_setup.sh
 source $DIR/install_zsh.sh
-source $DIR/install_java.sh
-source $DIR/install_ml_tools.sh
-source $DIR/install_elixir.sh
-source $DIR/install_haskell.sh
+# source $DIR/install_java.sh
+# source $DIR/install_ml_tools.sh
+# source $DIR/install_elixir.sh
+# source $DIR/install_haskell.sh
 # source $DIR/install_postgres.sh
-source $DIR/install_heroku.sh
+# source $DIR/install_heroku.sh
 # source $DIR/install_binaries.sh
