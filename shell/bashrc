@@ -3,6 +3,3 @@ export DOTFILES_DIR=$HOME/config/dotfiles
 source $DOTFILES_DIR/shell/common.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-
-complete -C /Users/lu/bin/vault vault

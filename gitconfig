@@ -29,7 +29,7 @@
   user = luisalima
 [core]
   editor = emacs
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/lu/.gitignore_global
 	ignorecase = false
 [merge]
   ff = true

@@ -48,27 +48,39 @@ find_latest_node() {
   nodenv install -l | gxargs -n 1 | grep '^[0-9]\+.[0-9]\+.[0-9]\+' | tail -n 1
 }
 
-brew_install() {
-    if [ -z "$(which "$1")" ]; then
-        brew install "$1"
+not_installed() {
+    [ -z "$(which "$1")" ]
+}
+
+get_os() {
+    uname -s
+}
+
+install_or_update() {
+    if $(not_installed "$1"); then
+        if [ $(get_os) = 'Darwin' ]; then
+            brew install "$1"
+        fi
+    else
+        if [ $(get_os) = 'Darwin' ]; then
+            brew upgrade "$1"
+        fi
     fi
 }
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-source $DIR/install_xcode.sh
-source $DIR/install_brew.sh
+fancy_echo "Detected $(get_os) system"
+
+if [ $(get_os) = 'Darwin' ]; then
+    source $DIR/install_xcode.sh
+    source $DIR/install_brew.sh
+fi
+
 source $DIR/install_python.sh
-source $DIR/install_shell_tools.sh
-source $DIR/install_editors.sh
-source $DIR/install_rubies.sh
-source $DIR/install_node.sh
-source $DIR/symlinks_setup.sh
-source $DIR/install_zsh.sh
-# source $DIR/install_java.sh
-# source $DIR/install_ml_tools.sh
-# source $DIR/install_elixir.sh
-# source $DIR/install_haskell.sh
-# source $DIR/install_postgres.sh
-# source $DIR/install_heroku.sh
-# source $DIR/install_binaries.sh
+# source $DIR/install_shell_tools.sh
+# source $DIR/install_editors.sh
+# source $DIR/install_rubies.sh
+# source $DIR/install_node.sh
+# source $DIR/symlinks_setup.sh
+# source $DIR/install_zsh.sh

@@ -3,10 +3,6 @@ source "$DOTFILES_DIR/shell/common.sh"
 
 setopt completealiases
 
-TERM='xterm-256color'
-
-DISABLE_UPDATE_PROMPT='true' # http://stackoverflow.com/a/25876379
-
 unsetopt correct_all
 alias rspec='nocorrect rspec'
 
@@ -17,26 +13,15 @@ source '/usr/local/opt/zsh-history-substring-search/share/zsh-history-substring-
 autoload -U promptinit; promptinit
 prompt pure
 
-eval "$(rbenv init - --no-rehash)"
-
-export PATH="$HOME/.nodenv/bin:$PATH"
-
 # setup zsh completion system
 # https://stackoverflow.com/questions/26462667/git-completion-not-working-in-zsh-on-os-x-yosemite-with-homebrew
 export FPATH="/usr/local/share/zsh-completions:/usr/local/share/zsh/site-functions:$FPATH"
 autoload -U compinit && compinit
 zmodload -i zsh/complist
 
-eval "$(nodenv init -)"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source /usr/local/opt/zsh-history-substring-search/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-
-export SPARK_HOME=/usr/local/spark
-
-export PATH=/usr/local/spark/bin:$PATH
-
-export PATH=$PATH:$HOME/go/bin
 
 ##############################################################################
 # History Configuration

@@ -31,12 +31,12 @@ alias e='emacs'
 alias gwip='git add -A; git commit -n -m "--wip-- [skip ci]"'
 
 eval "$(rbenv init - --no-rehash)"
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
 
 source "$DOTFILES_DIR/shell/git_config.sh"
 alias be='bundle exec'
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+export PATH=$PATH:$HOME/go/bin
 
 # important for tmux
 export TERM='xterm-256color'
