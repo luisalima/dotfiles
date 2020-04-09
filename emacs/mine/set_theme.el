@@ -1,7 +1,7 @@
 ;;; set_theme --- sets styling configurations
 
 ;; remove useless menu bar
-(menu-bar-mode -1) 
+(menu-bar-mode -1)
 
 ;; styling theme
 (require 'zenburn-theme)
@@ -10,6 +10,9 @@
 ;; highlight current line
 (global-hl-line-mode 1)
 (set-face-background 'hl-line "gray14")
+
+;; show column number
+(setq column-number-mode t)
 
 ;; display file size and line
 (size-indication-mode)
@@ -28,11 +31,15 @@
 ;;  keep code always indented
 (global-aggressive-indent-mode 1)
 
-;; auto close bracket insertion. 
+;; auto close bracket insertion.
 (electric-pair-mode 1)
 
 ;; see matching pairs of parentheses and other characters
 (show-paren-mode 1)
+
+;; highlight trailing whitespace
+(setq-default show-trailing-whitespace t)
+;; (setq whitespace-style '(face empty tabs lines-tail trailing))
 
 (provide 'set_theme)
 ;;; set_theme.el ends here
