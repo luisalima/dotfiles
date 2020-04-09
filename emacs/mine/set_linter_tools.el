@@ -1,5 +1,3 @@
-(require 'flycheck)
-;; (global-flycheck-mode)
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; customize flycheck temp file prefix
