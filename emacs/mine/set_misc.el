@@ -1,8 +1,6 @@
 (require 'ido)
 (ido-mode t)
 
-;; show column number
-(setq column-number-mode t)
 
 ;; word-count mode
 (require 'wc-mode)
@@ -34,5 +32,10 @@
 
 ;; (setq interprogram-cut-function 'paste-to-osx)
 ;; (setq interprogram-paste-function 'copy-from-osx)
+
+;; ;;Replace all freakin' ^M chars in the current buffer
+;; (fset 'replace-ctrlms
+;;    [escape ?< escape ?% ?\C-q ?\C-m return ?\C-q ?\C-j return ?!])
+;; (global-set-key "\C-cm" 'replace-ctrlms)
 
 (provide 'set_misc)
