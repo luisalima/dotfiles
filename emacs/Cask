@@ -3,25 +3,44 @@
 (source marmalade)
 (source org)
 
+;; packaging
 (depends-on "cask")
 (depends-on "pallet")
 
+;; styling
 (depends-on "zenburn-theme")
 (depends-on "rainbow-delimiters")
+(depends-on "wc-mode")
+(depends-on "highlight-indent-guides")
+
+;; prettifying
+(depends-on "aggressive-indent")
+
+;; incremental search
 (depends-on "helm")
+
+;; the silver searcher integration
 (depends-on "ag")
+
 (depends-on "projectile")
 (depends-on "helm-projectile")
+
+
+;; Make Emacs use the $PATH set up by the user's shell
 (depends-on "exec-path-from-shell")
+
+;; git
 (depends-on "magit")
 (depends-on "git-gutter")
+
+;; linting
 (depends-on "flycheck")
+
+;; modes for coding languages
 (depends-on "markdown-mode")
-(depends-on "wc-mode")
 (depends-on "yaml-mode")
 (depends-on "python-mode")
 (depends-on "json-mode")
 (depends-on "web-mode")
 (depends-on "js2-mode")
-(depends-on "highlight-indent-guides")
 (depends-on "go-mode")
