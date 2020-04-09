@@ -40,3 +40,5 @@ alias be='bundle exec'
 
 # important for tmux
 export TERM='xterm-256color'
+
+export PATH="$HOME/.cask/bin:$PATH"
