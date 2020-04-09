@@ -5,8 +5,8 @@
 (global-git-gutter-mode t)
 (custom-set-variables
  '(git-gutter:unchanged-sign "  ")
- '(git-gutter:modified-sign "~ ") 
- '(git-gutter:added-sign "+ ")  
+ '(git-gutter:modified-sign "~ ")
+ '(git-gutter:added-sign "+ ")
  '(git-gutter:deleted-sign "- "))
 
 (set-face-background 'git-gutter:modified "yellow")
@@ -18,5 +18,8 @@
 (set-face-foreground 'git-gutter:added "gray20")
 (set-face-foreground 'git-gutter:deleted "gray20")
 (set-face-foreground 'git-gutter:unchanged "gray20")
+
+;; revert all unchanged buffers when switching branches
+(global-auto-revert-mode)
 
 (provide 'set_git_tools)
