@@ -3,9 +3,10 @@
 (source marmalade)
 (source org)
 
-;; packaging
+;; package management & configuration
 (depends-on "cask")
 (depends-on "pallet")
+(depends-on "use-package")
 
 ;; styling
 (depends-on "zenburn-theme")
@@ -38,7 +39,7 @@
 ;; linting
 (depends-on "flycheck")
 
-;; modes for coding languages
+;; modes for coding
 (depends-on "markdown-mode")
 (depends-on "yaml-mode")
 (depends-on "python-mode")
@@ -46,15 +47,13 @@
 (depends-on "web-mode")
 (depends-on "js2-mode")
 (depends-on "go-mode")
+(depends-on "graphql-mode")
 
 ;; org-mode
 (depends-on "ob-go")
 
-;; completion & ide-like features
+;; code completion & ide-like features
 (depends-on "company")
 (depends-on "company-lsp")
 (depends-on "lsp-mode")
 (depends-on "lsp-ui")
-
-;; package configuration
-(depends-on "use-package")
