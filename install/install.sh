@@ -23,9 +23,9 @@ append_to_shell_config_files() {
   do
       if ! grep -Fqs "$text" "$FILE"; then
           if [ "$skip_new_line" -eq 1 ]; then
-              printf "%s\n" "$text" >> "$FILE"
+	      printf "%s\n" "$text" >> "$FILE"
           else
-              printf "\n%s\n" "$text" >> "$FILE"
+	      printf "\n%s\n" "$text" >> "$FILE"
           fi
       fi
   done
@@ -84,3 +84,6 @@ source $DIR/install_python.sh
 # source $DIR/install_node.sh
 # source $DIR/symlinks_setup.sh
 # source $DIR/install_zsh.sh
+
+# golang
+GO111MODULE=on go get golang.org/x/tools/gopls@latest

@@ -46,3 +46,15 @@
 (depends-on "web-mode")
 (depends-on "js2-mode")
 (depends-on "go-mode")
+
+;; org-mode
+(depends-on "ob-go")
+
+;; completion & ide-like features
+(depends-on "company")
+(depends-on "company-lsp")
+(depends-on "lsp-mode")
+(depends-on "lsp-ui")
+
+;; package configuration
+(depends-on "use-package")
