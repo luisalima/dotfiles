@@ -38,3 +38,8 @@ source "$DOTFILES_DIR/shell/last-working-dir.plugin.zsh"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /Users/lu/bin/vault vault
+eval "$(rbenv init - --no-rehash)"
+
+export PATH="$HOME/.nodenv/bin:$PATH"
+
+eval "$(nodenv init -)"

@@ -63,7 +63,7 @@ install_or_update() {
         fi
     else
         if [ $(get_os) = 'Darwin' ]; then
-            brew upgrade "$1"
+            brew upgrade "$1" || echo "$1 was not installed via brew"
         fi
     fi
 }
@@ -78,12 +78,13 @@ if [ $(get_os) = 'Darwin' ]; then
 fi
 
 source $DIR/install_python.sh
-# source $DIR/install_shell_tools.sh
-# source $DIR/install_editors.sh
-# source $DIR/install_rubies.sh
-# source $DIR/install_node.sh
-# source $DIR/symlinks_setup.sh
-# source $DIR/install_zsh.sh
+source $DIR/install_shell_tools.sh
+source $DIR/install_editors.sh
+source $DIR/install_rubies.sh
+source $DIR/install_node.sh
+source $DIR/symlinks_setup.sh
+source $DIR/install_zsh.sh
 
 # golang
+brew install golang
 GO111MODULE=on go get golang.org/x/tools/gopls@latest

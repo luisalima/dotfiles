@@ -2,5 +2,7 @@
 
 fancy_echo "installing editors..."
 
-install emacs
-install cask  # this is a different cask! Emacs cask
+brew tap daviderestivo/emacs-head
+brew install emacs-head@28 --with-cocoa
+
+install_or_update cask  # this is a different cask! Emacs cask

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 fancy_echo "installing rubies..."
-brew_install rbenv
+install_or_update rbenv
 
 ruby_version="$(find_latest_ruby)"
 # shellcheck disable=SC2016
