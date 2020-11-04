@@ -1,4 +1,4 @@
-(require 'cask "~/.cask/cask.el")
+(require 'cask)
 (cask-initialize)
 
 ;; Keep ~Cask~ file in sync with the packages
