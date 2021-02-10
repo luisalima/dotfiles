@@ -20,7 +20,7 @@
 (size-indication-mode)
 
 ;; display line numbers globally
-(global-display-line-numbers-mode t)
+;; (global-display-line-numbers-mode t)
 
 ;; highlight current line
 (global-hl-line-mode 1)
@@ -32,6 +32,13 @@
 ;; theme
 (require 'zenburn-theme)
 (load-theme 'zenburn t)
+
+(global-tab-line-mode 1)
+(global-visual-line-mode 1)
+
+(use-package dired-sidebar
+  :ensure t
+  :commands (dired-sidebar-toggle-sidebar))
 
 ;; auto close bracket insertion.
 (electric-pair-mode 1)

@@ -28,6 +28,7 @@
 ;; project management
 (depends-on "projectile")
 (depends-on "undo-tree")
+(depends-on "dired-sidebar")
 
 ;; Make Emacs use the $PATH set up by the user's shell
 (depends-on "exec-path-from-shell")
